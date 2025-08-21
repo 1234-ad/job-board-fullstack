@@ -1,0 +1,36 @@
+{
+  "name": "job-board-fullstack",
+  "version": "1.0.0",
+  "description": "Full-stack job board with resume management and AI matching",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm start",
+    "install-all": "npm install && cd client && npm install && cd ../server && npm install",
+    "build": "cd client && npm run build",
+    "db:setup": "cd server && npm run db:migrate && npm run db:seed",
+    "test": "npm run test:client && npm run test:server",
+    "test:client": "cd client && npm test",
+    "test:server": "cd server && npm test"
+  },
+  "keywords": [
+    "job-board",
+    "resume",
+    "react",
+    "nodejs",
+    "mysql",
+    "llm",
+    "ai",
+    "fullstack"
+  ],
+  "author": "Job Board Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}
